@@ -1,0 +1,76 @@
+/* Criar estilo para a pagina, tais como cores e fontes das letras */
+body {
+        font-family: 'Segoe UI', sans-serif;
+        color: #1e293b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+
+       /* Propriedades para a imagem de fundo */
+       background-image: url('C:\\Users\\talita.marilia\\OneDrive - SENAC RIO\\Dev\\FRONT-ED_PARA-WEB\\assets\\img\\background.jpg');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       background-attachment: fixed; 
+    }
+/* Estilo para a seção principal */
+section {
+    background-color: #b9a9ff;
+    border: 1px solid #CCCCCC
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Estilo para os artigos */
+article {
+    background-color: #e0e4a2;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    padding: 20px;
+}
+/* Estilo para os artigos e títulos */
+h2, h3 {
+/* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai 
+trocar de cor e chame argumento color */
+    color: #4c46cb;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.cartao-perfil {
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.cartao-titulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+cartao-subtitulo {
+    color: #2563eb;
+    font-weight: 600;  
+}
+
+.cartao-descricao{
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cartao-status {
+    color: #15803d;
+    background-color: rgba(22; 163, 74, 0.1)
+    text-transform: uppercase;
+    border-radius: 9999px;
+}
