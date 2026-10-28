@@ -11,7 +11,7 @@ body {
 .botao {
     display: inline-block   ;
     background-color: #8a2b57;
-    color: #ffffff;
+    color: #ffffff  ;
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none
