@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-label="Bolo de chocolate com cereja e laço decorativo">
+ <defs>
+  <linearGradient id="massa" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#B77A55"/><stop offset="1" stop-color="#80513B"/></linearGradient>
+  <linearGradient id="cobertura" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#80513B"/><stop offset="1" stop-color="#4E2C22"/></linearGradient>
+ </defs>
+ <ellipse cx="240" cy="403" rx="170" ry="22" fill="#4E2C22" opacity=".12"/>
+ <ellipse cx="240" cy="388" rx="172" ry="20" fill="#E8C6A5"/>
+ <path d="M99 229 Q240 193 381 229 L369 366 Q240 405 111 366 Z" fill="url(#massa)" stroke="#4E2C22" stroke-width="5"/>
+ <path d="M106 290 Q240 327 374 290" fill="none" stroke="#E8C6A5" stroke-width="19" opacity=".95"/>
+ <path d="M100 226 C105 188 166 173 240 173 C314 173 375 188 380 226 C385 248 364 244 357 264 C351 281 333 280 328 261 C323 245 304 245 300 270 C297 292 275 292 271 270 C267 248 249 249 246 276 C243 300 220 300 217 276 C214 251 195 251 190 270 C184 291 164 286 160 262 C156 242 136 243 131 264 C125 286 106 274 106 250 Z" fill="url(#cobertura)" stroke="#4E2C22" stroke-width="4"/>
+ <ellipse cx="240" cy="178" rx="93" ry="18" fill="#E8C6A5"/>
+ <path d="M236 172 Q222 135 244 112" stroke="#45603D" stroke-width="7" stroke-linecap="round" fill="none"/>
+ <path d="M241 133 Q265 106 279 128 Q262 143 241 133" fill="#63804A"/>
+ <circle cx="239" cy="160" r="29" fill="#B9273D" stroke="#8D1830" stroke-width="5"/>
+ <ellipse cx="229" cy="150" rx="9" ry="6" fill="#F5A5A9" opacity=".8" transform="rotate(-30 229 150)"/>
+ <path d="M240 324 C205 287 171 302 185 329 C196 352 222 342 240 329 C258 342 284 352 295 329 C309 302 275 287 240 324Z" fill="#E8C6A5" stroke="#80513B" stroke-width="5"/>
+ <circle cx="240" cy="325" r="12" fill="#B77A55" stroke="#80513B" stroke-width="4"/>
+ <path d="M236 336 L218 362 L240 355 L260 365 L246 337" fill="#E8C6A5" stroke="#80513B" stroke-width="4" stroke-linejoin="round"/>
+ <path d="M205 317 Q222 315 229 325 M275 317 Q258 315 251 325" fill="none" stroke="#B77A55" stroke-width="3"/>
+</svg>
