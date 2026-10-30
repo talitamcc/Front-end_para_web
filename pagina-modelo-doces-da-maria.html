@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <!-- AULA 8: esta linha faz a página se ajustar à tela do celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces da Maria | Confeitaria artesanal</title>
+
+    <!--
+        PÁGINA-MODELO: o objetivo final das alunas na aula 9.
+        Negócio fictício, só para mostrar o resultado. Cada aluna cria a página do seu próprio tema.
+
+        Para ficar igual ao que se ensina em aula:
+        1. Copie tudo o que está dentro da tag <style> para um arquivo chamado style.css.
+        2. Apague a tag <style> e coloque no lugar:
+           <link rel="stylesheet" href="style.css">
+        3. Salve a imagem do banner numa pasta assets e troque o src da imagem
+           por assets/bolo.jpg (o endereço longo que começa com "data:" é só para
+           este arquivo funcionar sozinho).
+    -->
+    <style>
+        /* ---------- AULA 5: tags (cores e fonte da página) ---------- */
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2b2b2b;
+            background-color: #fff7f2;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: Georgia, "Times New Roman", serif;
+            color: #8a2b57;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 0;
+        }
+
+        a {
+            color: #8a2b57;
+        }
+
+        img {
+            max-width: 100%;   /* a imagem nunca passa da largura da tela */
+            height: auto;
+        }
+
+        section {
+            padding: 48px 24px;
+        }
+
+        /* guarda o conteúdo num bloco centralizado */
+        .conteudo {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ---------- AULA 5: classes do topo e do banner ---------- */
+        header {
+            background-color: #ffffff;
+            border-bottom: 4px solid #8a2b57;
+            padding: 12px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: #8a2b57;
+            color: #ffffff;
+        }
+
+        .banner {
+            background-color: #fbe3d6;
+        }
+
+        .banner .conteudo {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .banner-texto {
+            flex: 1 1 320px;
+        }
+
+        .banner-imagem {
+            flex: 1 1 320px;
+        }
+
+        .banner h1 {
+            font-size: 44px;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        /* ---------- AULA 6: botão e cards (classes) ---------- */
+        .botao {
+            display: inline-block;
+            background-color: #8a2b57;
+            color: #ffffff;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .botao:hover {
+            background-color: #5e1a3b;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 250px;
+            background-color: #ffffff;
+            border: 2px solid #8a2b57;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card-preco {
+            font-weight: bold;
+            color: #8a2b57;
+        }
+
+        /* ---------- AULA 6: tabela de preços ---------- */
+        .tabela {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+
+        .tabela th {
+            background-color: #8a2b57;
+            color: #ffffff;
+            text-align: left;
+        }
+
+        .tabela th,
+        .tabela td {
+            padding: 12px;
+            border: 1px solid #8a2b57;
+        }
+
+        .tabela td:last-child {
+            white-space: nowrap;   /* o preço não quebra de linha */
+        }
+
+        .tabela tbody tr:hover {
+            background-color: #fbe3d6;
+        }
+
+        .tabela caption {
+            text-align: left;
+            padding-bottom: 8px;
+            font-weight: bold;
+        }
+
+        /* ---------- AULA 7: formulário ---------- */
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        .campo label,
+        legend {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .campo input[type="text"],
+        .campo input[type="email"],
+        .campo input[type="tel"],
+        .campo select,
+        .campo textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid #8a2b57;
+            border-radius: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset {
+            border: 2px solid #8a2b57;
+            border-radius: 8px;
+        }
+
+        .campo label.opcao {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 16px;
+        }
+
+        /* contorno visível para quem navega só com a tecla Tab */
+        a:focus,
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+            outline: 4px solid #1b4dd8;
+            outline-offset: 2px;
+        }
+
+        /* ---------- rodapé ---------- */
+        footer {
+            background-color: #8a2b57;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 24px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* ---------- AULA 8: responsivo (telas até 700 px) ---------- */
+        @media (max-width: 700px) {
+            body {
+                font-size: 17px;
+            }
+
+            .banner h1 {
+                font-size: 34px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 32px 16px;
+            }
+
+            .tabela th,
+            .tabela td {
+                padding: 8px;
+            }
+        }
+    </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+    <!-- AULA 5: topo com menu (links de âncora) -->
+    <header>
+        <p class="logo">Doces da Maria</p>
+        <nav aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#precos">Preços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- AULA 5: banner com imagem -->
+        <section id="inicio" class="banner">
+            <div class="conteudo">
+                <div class="banner-texto">
+                    <h1>Bolos e doces feitos à mão, com carinho</h1>
+                    <p>Encomende para o aniversário, o café da tarde ou aquele presente especial.</p>
+                    <a class="botao" href="#contato">Fale comigo</a>
+                </div>
+                <div class="banner-imagem">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MDAgNDAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCI+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNmYmUzZDYiLz4KICA8Y2lyY2xlIGN4PSI5MCIgY3k9IjgwIiByPSI0NiIgZmlsbD0iI2Y4ZDBiYyIvPgogIDxjaXJjbGUgY3g9IjUyMCIgY3k9IjMxMCIgcj0iNjAiIGZpbGw9IiNmOGQwYmMiLz4KICA8ZWxsaXBzZSBjeD0iMzAwIiBjeT0iMzM4IiByeD0iMjMwIiByeT0iMjYiIGZpbGw9IiNmZmZmZmYiLz4KICA8cmVjdCB4PSIxMzUiIHk9IjIzNiIgd2lkdGg9IjMzMCIgaGVpZ2h0PSI5NiIgcng9IjE0IiBmaWxsPSIjYzk3ODRmIi8+CiAgPHJlY3QgeD0iMTY1IiB5PSIxNjQiIHdpZHRoPSIyNzAiIGhlaWdodD0iODQiIHJ4PSIxNCIgZmlsbD0iI2U4YTc3ZSIvPgogIDxyZWN0IHg9IjE2NSIgeT0iMTUwIiB3aWR0aD0iMjcwIiBoZWlnaHQ9IjM0IiByeD0iMTciIGZpbGw9IiM4YTJiNTciLz4KICA8Y2lyY2xlIGN4PSIxOTUiIGN5PSIxOTAiIHI9IjEyIiBmaWxsPSIjOGEyYjU3Ii8+CiAgPGNpcmNsZSBjeD0iMjQ1IiBjeT0iMTk2IiByPSIxNCIgZmlsbD0iIzhhMmI1NyIvPgogIDxjaXJjbGUgY3g9IjMwNSIgY3k9IjE5MiIgcj0iMTIiIGZpbGw9IiM4YTJiNTciLz4KICA8Y2lyY2xlIGN4PSIzNjAiIGN5PSIxOTgiIHI9IjE0IiBmaWxsPSIjOGEyYjU3Ii8+CiAgPGNpcmNsZSBjeD0iNDEwIiBjeT0iMTkwIiByPSIxMiIgZmlsbD0iIzhhMmI1NyIvPgogIDxyZWN0IHg9IjEzNSIgeT0iMjI2IiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjIyIiByeD0iMTEiIGZpbGw9IiM4YTJiNTciLz4KICA8Y2lyY2xlIGN4PSIzMDAiIGN5PSIxMjgiIHI9IjIwIiBmaWxsPSIjYzAxODNmIi8+CiAgPHBhdGggZD0iTTMwMCAxMDggQzMwMCA5MiAzMTIgODQgMzI2IDgyIiBzdHJva2U9IiMzYjdhM2IiIHN0cm9rZS13aWR0aD0iNSIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPHJlY3QgeD0iMjEwIiB5PSIxNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjZmZmZmZmIiB0cmFuc2Zvcm09InJvdGF0ZSgyNSAyMTcgMTYyKSIvPgogIDxyZWN0IHg9IjI2MCIgeT0iMTU4IiB3aWR0aD0iMTQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iI2ZiZTNkNiIgdHJhbnNmb3JtPSJyb3RhdGUoLTIwIDI2NyAxNjApIi8+CiAgPHJlY3QgeD0iMzQwIiB5PSIxNjAiIHdpZHRoPSIxNCIgaGVpZ2h0PSI1IiByeD0iMi41IiBmaWxsPSIjZmZmZmZmIiB0cmFuc2Zvcm09InJvdGF0ZSgxNSAzNDcgMTYyKSIvPgogIDxyZWN0IHg9IjM5MCIgeT0iMTU4IiB3aWR0aD0iMTQiIGhlaWdodD0iNSIgcng9IjIuNSIgZmlsbD0iI2ZiZTNkNiIgdHJhbnNmb3JtPSJyb3RhdGUoLTMwIDM5NyAxNjApIi8+Cjwvc3ZnPgo="
+                         alt="Bolo de camadas com cobertura de framboesa e uma cereja no topo"
+                         width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- AULA 5: seção Sobre -->
+        <section id="sobre">
+            <div class="conteudo">
+                <h2>Sobre mim</h2>
+                <p>
+                    Sou a Maria e faço doces há dez anos. Comecei vendendo para os vizinhos
+                    e hoje atendo festas e encomendas de toda a região. Uso ingredientes
+                    frescos e receitas da minha família.
+                </p>
+            </div>
+        </section>
+
+        <!-- AULA 6: serviços em cards (mesma classe nos três) -->
+        <section id="servicos">
+            <div class="conteudo">
+                <h2>O que eu faço</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Bolos de aniversário</h3>
+                        <p>Massa fofinha, recheio à sua escolha e decoração no tema da festa.</p>
+                        <p class="card-preco">A partir de R$ 58,00</p>
+                    </article>
+                    <article class="card">
+                        <h3>Doces para festa</h3>
+                        <p>Brigadeiros gourmet, beijinhos e cajuzinhos em caixas de 12 ou 50 unidades.</p>
+                        <p class="card-preco">A partir de R$ 36,00</p>
+                    </article>
+                    <article class="card">
+                        <h3>Sobremesas no pote</h3>
+                        <p>Porção individual, prática para levar. Sabores que mudam a cada semana.</p>
+                        <p class="card-preco">A partir de R$ 9,00</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- AULA 6: tabela de preços -->
+        <section id="precos">
+            <div class="conteudo">
+                <h2>Tabela de preços</h2>
+                <table class="tabela">
+                    <caption>Valores dos produtos mais pedidos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Porção</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bolo caseiro</td>
+                            <td>1 kg</td>
+                            <td>R$ 58,00</td>
+                        </tr>
+                        <tr>
+                            <td>Torta de limão</td>
+                            <td>8 fatias</td>
+                            <td>R$ 65,00</td>
+                        </tr>
+                        <tr>
+                            <td>Brigadeiros gourmet</td>
+                            <td>12 unidades</td>
+                            <td>R$ 36,00</td>
+                        </tr>
+                        <tr>
+                            <td>Sobremesa no pote</td>
+                            <td>1 unidade</td>
+                            <td>R$ 9,00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">Encomendas com 3 dias de antecedência.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- AULA 7: formulário de contato (só a parte visual, não envia nada) -->
+        <section id="contato">
+            <div class="conteudo">
+                <h2>Fale comigo</h2>
+                <form action="#" method="get">
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Souza" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(21) 90000-0000">
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="encomenda">Fazer uma encomenda</option>
+                            <option value="orcamento">Pedir um orçamento</option>
+                            <option value="duvida">Tirar uma dúvida</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="campo">
+                        <legend>Como prefere que eu responda?</legend>
+                        <label class="opcao"><input type="radio" name="resposta" value="whatsapp" checked> WhatsApp</label>
+                        <label class="opcao"><input type="radio" name="resposta" value="email"> E-mail</label>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte o que você precisa e para quando."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Doces da Maria. Página de exemplo feita em aula.</p>
+    </footer>
+
+</body>
+</html>
