@@ -1,57 +1,148 @@
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doces Talita Marília | Confeitaria Artesanal</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+   
 <body>
 
-</body>
-<section id="contato">
+    <!-- AULA 5: Cabeçalho e menu de navegação -->
+    <header>
+        <p class="logo">🍒 Doces Talita Marília</p>
+
+        <nav aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#precos">Preços</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        
+<!-- AULA 5: Banner principal -->
+<section id="inicio" class="banner">
     <div class="conteudo">
-        <h2>Fale comigo</h2>
-        <form action="#" method="get">
-            <div class="cards">
-                <article class="campo">
-                    <label for="nome">Seu nome</label>
-                    <input type="text" id="nome" nome="nome" placeholder="Ana Souza" required>
-            </div>
+        
+<!-- Imagem principal da confeitaria -->
+<div class="banner-imagem">
+    <img src="assets/bolo_chocolate_cereja.svg"
+         alt="Bolo artesanal em tons de marrom,
+         decorado com cereja e lacinho">
+</div>
 
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" nome="email" placeholder="voce@exemplo.com" required>
-            </div>
+        <div class="banner-texto">
+            <h1>Doces momentos começam aqui!</h1>
 
-            <div class="campo">
-                <label for="telefone">Telefone</label>
-                <input type="tel" id="telefone" nome="telefone" placeholder="(21) 99999-9999" required>
-            </div>
-            <div class="campo">
-                <label for="assunto">Assunto</label>
-                <select id="assunto" nome="assunto">
-                    <option value="encomenda">Fazer uma encomenda</options>
-                    <option value="orcamento">Pedir um orçamento</option>
-                    <option value="duvida">Tirar uma dúvida</option>
-                </select>
-            </div>
+            <p>
+                Bolos e doces artesanais preparados
+                com carinho para adoçar seus
+                momentos mais especiais.
+            </p>
 
-            <fieldset class="campo">
-                <legend>Como prefere que eu responda?</legend>
-                <label class="opcao"><input type="radio" nome="resposta" value="whatsapp" checked>Whatsapp</label>
-                <label class="opcao"><input type="radio" nome="resposta" value="email"> E-mail</label>
-            </fieldset>
+            <a href="#contato" class="botao">
+                Faça sua encomenda
+            </a>
+        </div>
 
-            <div class="campo">
-                <label for="mensagem">Mensagem</label>
-                <textarea id="mensagem" nome="mensagem" rows="5"
-                    placeholder="Conte o que você precisa e para quando."></textarea>
-            </div>
-
-            <button type="submit" class="botao">Enviar mensagem</button>
-        </form>
     </div>
 </section>
-</main>
-<footer>
-    <p>© 2026 Doces da Maria. Página de exemplo feita em aula.</p>
-</footer>
+
+<!-- AULA 5: Sobre a confeitaria -->
+<section id="sobre">
+    <div class="conteudo">
+        <h2>Sobre a Doces Talita Marília</h2>
+
+        <p>
+            A Doces Talita Marília nasceu do carinho
+            pelos pequenos momentos que tornam a vida
+            mais doce.
+        </p>
+
+        <p>
+            Nossa confeitaria valoriza os sabores
+            artesanais, o cuidado em cada detalhe
+            e a alegria de compartilhar doces
+            momentos com pessoas especiais.
+        </p>
+    </div>
+</section>
+
+        <!-- AULA 7: Formulário de contato -->
+        <section id="contato">
+            <div class="conteudo">
+                <h2>Fale comigo</h2>
+
+                <form action="#" method="get">
+
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome"
+                            placeholder="Ana Souza" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="voce@exemplo.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone"
+                            placeholder="(21) 99999-9999" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="encomenda">Fazer uma encomenda</option>
+                            <option value="orcamento">Pedir um orçamento</option>
+                            <option value="duvida">Tirar uma dúvida</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="campo">
+                        <legend>Como prefere que eu responda?</legend>
+
+                        <label class="opcao">
+                            <input type="radio" name="resposta"
+                                value="whatsapp" checked>
+                            WhatsApp
+                        </label>
+
+                        <label class="opcao">
+                            <input type="radio" name="resposta"
+                                value="email">
+                            E-mail
+                        </label>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem"
+                            rows="5"
+                            placeholder="Conte o que você precisa e para quando."></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Doces Talita Marília. Feito com carinho!</p>
+    </footer>
 
 </body>
-
 </html>
