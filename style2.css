@@ -284,3 +284,185 @@ nav a:hover {
 #sobre p:last-child {
     margin-bottom: 0;
 }
+
+
+/* ===== SEÇÃO SERVIÇOS - DOCES TALITA MARÍLIA ===== */
+
+#servicos {
+    background-color: #FFF8F0;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+#servicos .conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#servicos h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #8A2B57;
+    margin-bottom: 12px;
+}
+
+#servicos .subtitulo {
+    font-size: 18px;
+    color: #5C4033;
+    margin-bottom: 35px;
+}
+
+/* Organização dos três cards */
+
+#servicos .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Aparência das caixas */
+
+#servicos .card {
+    background-color: #FFFFFF;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border: 1px solid #F0D8DE;
+    box-shadow: 0 5px 15px rgba(92, 64, 51, 0.10);
+    transition: transform 0.3s ease;
+}
+
+#servicos .card:hover {
+    transform: translateY(-6px);
+}
+
+/* Emojis dos produtos */
+
+#servicos .card-icone {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+/* Títulos dos cards */
+
+#servicos .card h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    color: #8A2B57;
+    margin-bottom: 12px;
+}
+
+/* Descrição dos produtos */
+
+#servicos .card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #5C4033;
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 800px) {
+    #servicos .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SEÇÃO PREÇOS - DOCES TALITA MARÍLIA ===== */
+
+#precos {
+    background-color: #FFFFFF;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+#precos .conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#precos h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #8A2B57;
+    margin-bottom: 12px;
+}
+
+#precos .subtitulo {
+    font-size: 18px;
+    color: #5C4033;
+    margin-bottom: 35px;
+}
+
+/* Tabela de preços */
+
+#precos .tabela-precos {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 25px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 18px rgba(92, 64, 51, 0.10);
+}
+
+#precos .tabela-precos th {
+    background-color: #8A2B57;
+    color: #FFFFFF;
+    padding: 18px;
+    font-size: 17px;
+    text-align: left;
+}
+
+#precos .tabela-precos td {
+    padding: 18px;
+    text-align: left;
+    color: #5C4033;
+    border-bottom: 1px solid #F0D8DE;
+}
+
+#precos .tabela-precos tbody tr:nth-child(even) {
+    background-color: #FFF8F0;
+}
+
+#precos .tabela-precos tbody tr:hover {
+    background-color: #FCE6ED;
+}
+
+/* Aviso abaixo da tabela */
+
+#precos .aviso-precos {
+    color: #5C4033;
+    font-size: 16px;
+    margin: 25px 0;
+    line-height: 1.6;
+}
+
+/* Botão de orçamento */
+
+#precos .botao {
+    display: inline-block;
+    background-color: #8A2B57;
+    color: #FFFFFF;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#precos .botao:hover {
+    background-color: #6D2043;
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    #precos {
+        padding: 40px 12px;
+    }
+
+    #precos .tabela-precos th,
+    #precos .tabela-precos td {
+        padding: 10px 6px;
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+}

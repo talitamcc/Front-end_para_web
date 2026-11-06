@@ -125,17 +125,78 @@
 </section>
 
         <!-- AULA 7: Formulário de contato -->
+         
+<!-- SEÇÃO PREÇOS -->
+<section id="precos">
+    <div class="conteudo">
+
+        <h2>Cardápio de Delícias</h2>
+
+        <p class="subtitulo">
+            Sabores especiais para momentos inesquecíveis!
+        </p>
+
+        <table class="tabela-precos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>🎂 Bolos Artesanais</td>
+                    <td>Sabores variados, sob encomenda</td>
+                    <td>Consultar</td>
+                </tr>
+
+                <tr>
+                    <td>🧁 Cupcakes</td>
+                    <td>Unidades decoradas com carinho</td>
+                    <td>Consultar</td>
+                </tr>
+
+                <tr>
+                    <td>🍬 Docinhos para Festas</td>
+                    <td>Brigadeiros e doces especiais</td>
+                    <td>Consultar</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p class="aviso-precos">
+            💜 Valores e quantidades sob consulta.
+            Faça sua encomenda com antecedência!
+        </p>
+
+        <a href="#contato" class="botao">
+            Solicitar orçamento
+        </a>
+
+    </div>
+</section>
         <section id="contato">
             <div class="conteudo">
                 <h2>Fale comigo</h2>
 
                 <form action="#" method="get">
 
-                    <div class="campo">
-                        <label for="nome">Seu nome</label>
-                        <input type="text" id="nome" name="nome"
-                            placeholder="Ana Souza" required>
-                    </div>
+
+                 <div class="campo">
+                 <label for="nome">Seu nome</label>
+                <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                minlength="3"
+                maxlength="80"
+                pattern="[A-Za-zÀ-ÿ ]+"
+                title="Digite apenas letras e espaços."
+                autocomplete="name" required>
+    </div>
 
                     <div class="campo">
                         <label for="email">E-mail</label>
@@ -193,6 +254,46 @@
     <footer>
         <p>© 2026 Doces Talita Marília. Feito com carinho!</p>
     </footer>
+    
+<script>
+    // Selecionando os campos do formulário
+    const nome = document.getElementById('nome');
+    const email = document.getElementById('email');
+    const telefone = document.getElementById('telefone');
+
+    // NOME: permite letras, acentos, espaços,
+    // apóstrofos e hífens.
+    nome.addEventListener('input', () => {
+        nome.value = nome.value.replace(/[^\p{L}' -]/gu, '');
+    });
+
+    // E-MAIL: remove espaços durante a digitação.
+    email.addEventListener('input', () => {
+        email.value = email.value.replace(/\s/g, '');
+    });
+
+    // TELEFONE: aceita apenas números
+    // e aplica a máscara automaticamente.
+    telefone.addEventListener('input', () => {
+        const d = telefone.value.replace(/\D/g, '').slice(0, 11);
+        let formatado = d;
+
+        if (d.length > 2) {
+            const parte = d.slice(2);
+            const corte = d.length > 10 ? 5 : 4;
+
+            if (parte.length > corte) {
+                formatado = `(${d.slice(0, 2)}) ${parte.slice(0, corte)}-${parte.slice(corte)}`;
+            } else {
+                formatado = `(${d.slice(0, 2)}) ${parte}`;
+            }
+        } else if (d.length > 0) {
+            formatado = `(${d}`;
+        }
+
+        telefone.value = formatado;
+    });
+</script>
 
 </body>
 </html>
